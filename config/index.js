@@ -13,7 +13,7 @@ const cookieParser = require("cookie-parser");
 // unless the request if from the same domain, by default express wont accept POST requests
 const cors = require("cors");
 
-const FRONTEND_URL = process.env.ORIGIN || "https://www.apracacfit.com/";
+const FRONTEND_URL = "http://localhost:5173/" || "https://www.apracacfit.com/";
 
 // Middleware configuration
 module.exports = (app) => {

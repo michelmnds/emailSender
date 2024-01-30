@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
     from: payload.email,
     to: process.env.TO_EMAIL,
     subject: "Um novo formulário foi preenchido - A Praça",
-    text: `Nome: ${payload.nome}, email: ${payload.email}, objetivo: ${payload.objetivo}, patologias: ${payload.patologia}`,
+    text: `Nome: ${payload.nome}, telemóvel: ${payload.telemovel}, objetivo: ${payload.objetivo}, patologias: ${payload.patologia}, personal trainer: ${payload.pt}`,
   });
 
   transporter.sendMail(message, (error, info) => {
