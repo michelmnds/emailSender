@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
 
   const message = await transporter.sendMail({
     from: payload.email,
-    to: "m1tchofc@gmail.com",
+    to: process.env.TO_EMAIL,
     subject: "Um novo formulário foi preenchido - A Praça",
     text: `Nome: ${payload.nome}, email: ${payload.email}, objetivo: ${payload.objetivo}, patologias: ${payload.patologia}`,
   });
